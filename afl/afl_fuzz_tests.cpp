@@ -1,7 +1,7 @@
 #include "GifTranscoder.h"
-#include < stdio.h > 
-#include < stdint.h > 
-#include < string.h >
+#include <stdio.h> 
+#include <stdint.h> 
+#include <string.h>
 
 int main(int argc, char * * argv) {
   const char * pathIn = strdup(argv[1]);
