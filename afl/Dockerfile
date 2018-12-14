@@ -24,7 +24,7 @@ RUN cd afl-2.52b/ && make install
 
 
 #Download and Install giflib
-RUN wget "https://gigenet.dl.sourceforge.net/project/giflib/giflib-5.1.4.tar.bz2"
+RUN wget "gigenet.dl.sourceforge.net/project/giflib/giflib-5.1.4.tar.bz2"
 RUN tar xvf giflib-5.1.4.tar.bz2
 
 
