@@ -14,7 +14,7 @@ RUN apt-get --yes install libreadline-dev autoconf automake pkg-config make wget
 #Install Clang
 RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key| apt-key add -
 RUN apt-get update
-RUN apt-get install clang-6.0 lldb-6.0 lld-6.0 libfuzzer-6.0-dev
+RUN apt-get  --yes install clang-6.0 lldb-6.0 lld-6.0 libfuzzer-6.0-dev
 
 #Install AFL
 #RUN wget "lcamtuf.coredump.cx/afl/releases/afl-latest.tgz"
@@ -24,13 +24,12 @@ RUN apt-get install clang-6.0 lldb-6.0 lld-6.0 libfuzzer-6.0-dev
 
 
 #Download and Install giflib
-RUN wget "https://gigenet.dl.sourceforge.net/project/giflib/giflib-5.1.4.tar.bz2"
+RUN wget "gigenet.dl.sourceforge.net/project/giflib/giflib-5.1.4.tar.bz2"
 RUN tar xvf giflib-5.1.4.tar.bz2
 
 
 RUN cd giflib-5.1.4/ && CC=clang-6.0 CFLAGS="-g"./configure
-RUN cd giflib-5.1.4/ && make check
-RUN cd giflib-5.1.4/ && make install
-
+#RUN cd giflib-5.1.4/ && make check
+#RUN cd giflib-5.1.4/ && make install
 
 
